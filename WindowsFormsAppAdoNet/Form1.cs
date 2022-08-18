@@ -16,5 +16,10 @@ namespace WindowsFormsAppAdoNet
         {
             InitializeComponent();
         }
+        Product productDAL = new Product(); // veritabanı işlemlerinin olduğu sınıfı tanımladık
+        private void dgvUrunler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvUrunler.DataSource = productDAL.GetAll(); //FromChildHandle ön yüzdeki 
+        }
     }
 }
